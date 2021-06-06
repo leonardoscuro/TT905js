@@ -7,14 +7,13 @@ app.use(cors());
 
 app.listen(process.env.PORT || 3000);
 
-const mensagens = [
-    "Elziele da Rocha", "Lucas Canova dos Santos", 0 
-];
+filmes = [{título:"331",nome:"Produto 1", valor:"11.98"},
+{título:"331",nome:"Produto 1", valor:"11.98"},
+{título:"331",nome:"Produto 1", valor:"11.98"}]
 
 app.get('/mensagens',
     function(req, res){
-        // res.send(mensagens);
-        res.send(mensagens.filter(Boolean));
+        res.send(mensagens);
     }
 );
 
